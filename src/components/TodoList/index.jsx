@@ -9,7 +9,7 @@ function TodoList({ todoList }) {
         <div>
             <div>
                 {todoList.map(todo => (
-                    <div key={todo.id}>
+                    <div key={todo.id}  >
                     {todo.title}
                     </div>
                 ))}

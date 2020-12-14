@@ -5,18 +5,27 @@ import TodoList from '../../components/TodoList';
 
 
 function TodoFeature(props) {
+    
     const mang = [
         {
             id: 1,
             title: 'an'
+
         },
         {
             id: 2,
             title: 'ngu'
+
         },
         {
             id: 3,
             title: 'ia'
+
+        },
+        {
+            id: 4,
+            title: 'dich'
+
         }
     ]
     return (

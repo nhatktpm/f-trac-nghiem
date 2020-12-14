@@ -5,28 +5,31 @@ import TodoList from '../../components/TodoList';
 
 
 function TodoFeature(props) {
-    const TodoList = [
+    const mang = [
         {
-            id:1,
-            title: 'eat',
-            status: 1
+            id: 1,
+            title: 'an'
         },
         {
-            id:2,
-            title: 'eat',
-            status: 1
+            id: 2,
+            title: 'ngu'
         },
         {
-            id:3,
-            title: 'eat',
-            status: 1
+            id: 3,
+            title: 'ia'
         }
     ]
     return (
         <div>
-            <TodoList todoList={TodoList}/>
+            <h3>hello moi nguoi</h3>
+            <TodoList todoList={mang} />
+
+
         </div>
+
     );
+    console.log(props)
 }
+
 
 export default TodoFeature;

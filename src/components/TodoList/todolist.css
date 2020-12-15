@@ -1,0 +1,11 @@
+.item{
+    height: 20px;
+    border: 1px saddlebrown solid;
+    width: 40px;
+    margin: 20px auto;
+
+}
+
+.click{
+    background-color: aqua;    
+}

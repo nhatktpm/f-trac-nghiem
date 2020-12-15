@@ -33,11 +33,10 @@ function TodoFeature(props) {
             <h3>hello moi nguoi</h3>
             <TodoList todoList={mang} />
 
-
         </div>
 
     );
-    console.log(props)
+    
 }
 
 

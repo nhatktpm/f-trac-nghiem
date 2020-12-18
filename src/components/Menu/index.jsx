@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import "./styles.css"
 
 Menu.propTypes = {
     
@@ -7,8 +8,8 @@ Menu.propTypes = {
 
 function Menu(props) {
     return (
-        <div>
-            
+        <div className="menu">
+            Menu
         </div>
     );
 }

@@ -1,30 +1,32 @@
-import React, { useState } from 'react';
-
 import "./todolist.css";
 import classnames from 'classnames';
 
 
 
-function TodoList({ todoList }) {
-    const [css, setCss] = useState('2');
-    const handleClick = () => {
-        setCss('1')
-        console.log('asd')
+function TodoList({ todoList, ham }) {
+       
+
+    const handleHam = (todo, index) => {
+        if (!ham) return;
+        ham(todo, index);
+      
+
     }
+    
     return (
 
         <div>
             <div>
-                {todoList.map(todo => (
+                {todoList.map((todo, idex) => (
                     <div key={todo.id}
                         className={classnames({
                             item: true,
-                            
+                            click: todo.status === 'new'
                         })}
-                        onClick={() => handleClick()}
+                        onClick={() => handleHam(todo, idex)}
                     >
-                    
-                        {todo.title} {css} 
+
+                        {todo.title}
                     </div>
                 ))}
 

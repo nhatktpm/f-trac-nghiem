@@ -3,34 +3,35 @@ import classnames from 'classnames';
 
 
 
-function TodoList({ todoList, ham }) {
-       
+function TodoList({ todoList, onTodoClick }) {
 
-    const handleHam = (todo, index) => {
-        if (!ham) return;
-        ham(todo, index);
-      
+
+    const handleTodoClick = (todo, idx) => {
+        if (!onTodoClick) {
+            console.log('aas')
+        };
+        onTodoClick(todo, idx);
+
 
     }
-    
+
     return (
 
         <div>
-            <div>
-                {todoList.map((todo, idex) => (
-                    <div key={todo.id}
+            <ul>
+                {todoList.map((todo, idx) => (
+                    <li key={todo.id}
                         className={classnames({
                             item: true,
-                            click: todo.status === 'new'
+                            completed: todo.status === 'completed'
                         })}
-                        onClick={() => handleHam(todo, idex)}
+                        onClick={() => handleTodoClick(todo, idx)}
                     >
-
                         {todo.title}
-                    </div>
+                    </li>
                 ))}
 
-            </div>
+            </ul>
         </div>
 
 

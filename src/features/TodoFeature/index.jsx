@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import TodoList from '../../components/TodoList';
 
 
@@ -7,49 +6,52 @@ import TodoList from '../../components/TodoList';
 function TodoFeature(props) {
 
 
-    const initMang = [
+    const initTodoList = [
         {
             id: 1,
             title: 'an',
-            status: 'new'
+            status: 'new',
+
         },
         {
             id: 2,
             title: 'ngu',
-            status: 'comple'
+            status: 'completed',
+
         },
         {
             id: 3,
-            title: 'an',
-            status: 'new'
+            title: 'dich',
+            status: 'new',
+
         },
         {
             id: 4,
-            title: 'ngu',
-            status: 'comple'
+            title: 'lam an',
+            status: 'completed',
+
         }
     ]
 
-    const [mang, setMang] = useState(initMang);
+    const [todoList, setTodoList] = useState(initTodoList);
 
-    const handleMang = (todo, index) => {
 
-        const newTodoList = [...mang];
+    const handleTodoClick = (todo, idx) => {
+        const newTodoList = [...todoList];
 
-        newTodoList[index] = {
-            ...newTodoList[index],
+        newTodoList[idx] = {
+            ...newTodoList[idx],
+            status: newTodoList[idx].status === 'new' ? 'completed' : 'new',
 
-            status: newTodoList[index].status === 'new' ? 'comple' : 'new',
         };
-        setMang(newTodoList);
-
+        setTodoList(newTodoList)
     }
 
 
     return (
         <div>
-            <h3>hello moi nguoi</h3>
-            <TodoList todoList={initMang} ham={handleMang} />
+            <h3>hello moi nguoi  </h3>
+            <TodoList todoList={todoList} onTodoClick={handleTodoClick} />
 
         </div>
 

@@ -3,7 +3,9 @@ import TodoList from '../../components/TodoList';
 
 
 
+
 function TodoFeature(props) {
+
 
 
     const initTodoList = [
@@ -34,6 +36,7 @@ function TodoFeature(props) {
     ]
 
     const [todoList, setTodoList] = useState(initTodoList);
+    const [filStatus, setFilStatus] = useState('all');
 
 
     const handleTodoClick = (todo, idx) => {
@@ -48,10 +51,35 @@ function TodoFeature(props) {
     }
 
 
+    const showAll = () => {
+        setFilStatus('all');
+    }
+    const showCompleted = () => {
+        setFilStatus('completed');
+    }
+    const showNew = () => {
+        setFilStatus('new');
+    }
+
+    const renderTodoList = todoList.filter(todo => filStatus === 'all' || filStatus === todo.status);
+   
+
     return (
         <div>
             <h3>hello moi nguoi  </h3>
-            <TodoList todoList={todoList} onTodoClick={handleTodoClick} />
+            <TodoList todoList={renderTodoList} onTodoClick={handleTodoClick} />
+
+            <button onClick={showAll} >
+                Show All
+            </button>
+
+            <button onClick={showCompleted}>
+                Show Completed
+             </button>
+
+            <button onClick={showNew}  >
+                Show New
+            </button>
 
         </div>
 

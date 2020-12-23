@@ -8,7 +8,7 @@ const listTestApi = {
     },
     get(id) {
         const url = `/list-test/${id}`;
-        return axiosClient.get(url);
+        return axiosClient.get(url); 
     },
     add(data) {
         const url = '/list-test';

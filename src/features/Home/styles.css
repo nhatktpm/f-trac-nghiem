@@ -4,3 +4,9 @@ section.home{
     width: 100%;
     
 }
+
+.test__contai{
+    justify-content: center;
+    margin-bottom: 50px;
+
+}

@@ -18,14 +18,14 @@ function App() {
         <Menu />
         <Banner />
 
-        <div className="container">
+        <section className="container-fluid">
           <Switch>
             <Route path="/" component={HomeFeature} exact />
             <Route path="/todofeature" component={TodoFeature} />
             <Route path="/part1" component={Part1} />
 
           </Switch>
-        </div>
+        </section>
 
 
 

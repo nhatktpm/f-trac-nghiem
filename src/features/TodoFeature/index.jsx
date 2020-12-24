@@ -62,10 +62,10 @@ function TodoFeature(props) {
     }
 
     const renderTodoList = todoList.filter(todo => filStatus === 'all' || filStatus === todo.status);
-   
+
 
     return (
-        <div>
+        <section>
             <h3>hello moi nguoi  </h3>
             <TodoList todoList={renderTodoList} onTodoClick={handleTodoClick} />
 
@@ -81,7 +81,7 @@ function TodoFeature(props) {
                 Show New
             </button>
 
-        </div>
+        </section>
 
     );
 

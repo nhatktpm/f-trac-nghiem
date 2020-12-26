@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import TodoList from '../../components/TodoList';
-
+import queryString from 'query-string';
+import TodoForm from '../../components/TodoForm';
 
 
 
@@ -35,8 +37,13 @@ function TodoFeature(props) {
         }
     ]
 
+    const location = useLocation();
+
     const [todoList, setTodoList] = useState(initTodoList);
-    const [filStatus, setFilStatus] = useState('all');
+    const [filStatus, setFilStatus] = useState(() => {
+        const params = queryString.parse(location.search);
+        return params.status || 'all';
+    });
 
 
     const handleTodoClick = (todo, idx) => {
@@ -64,9 +71,18 @@ function TodoFeature(props) {
     const renderTodoList = todoList.filter(todo => filStatus === 'all' || filStatus === todo.status);
 
 
+    const handleTodoFormSubmit = (values) => {
+        console.log('form submit: ', values);
+    }
+
     return (
         <section>
-            <h3>hello moi nguoi  </h3>
+            <h3>What to do</h3>
+            <TodoForm onSubmit={handleTodoFormSubmit} />
+
+
+
+            <div> this is my to do</div>
             <TodoList todoList={renderTodoList} onTodoClick={handleTodoClick} />
 
             <button onClick={showAll} >

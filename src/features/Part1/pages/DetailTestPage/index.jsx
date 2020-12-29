@@ -1,10 +1,10 @@
 import React from 'react';
-
+import Container from '@material-ui/core/Container';
 function DetailTestPage(props) {
     return (
-        <div>
+        <Container>
             DetailTestPage
-        </div>
+        </Container>
     );
 }
 

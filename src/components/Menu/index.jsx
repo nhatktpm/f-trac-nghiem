@@ -1,74 +1,155 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import "../Menu/styles.css"
-// import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
-import HomeIcon from '@material-ui/icons/Home';
 
-// const useStyles = makeStyles((theme) => ({
-//     root: {
-//         '& > *': {
-//             margin: theme.spacing(1),
-//         },
-//     },
-// }));
+import { Link } from 'react-router-dom';
+
+// toggo
+import { withStyles } from '@material-ui/core/styles';
+
+import Menu2 from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import DraftsIcon from '@material-ui/icons/Drafts';
+import SendIcon from '@material-ui/icons/Send';
+import { NoEncryption } from '@material-ui/icons';
 
 
-function Menu(props) {
 
-    // const classes = useStyles();
+
+
+const useStyles = makeStyles((theme) => ({
+    menu: {
+        margin: 30,
+    },
+    menuButton: {
+        marginRight: theme.spacing(2),
+    },
+    iconItem: {
+        minWidth: 35,
+    },
+
+
+}));
+
+
+const StyledMenu = withStyles({
+    paper: {
+        border: '1px solid #d3d4d5',
+    },
+})((props) => (
+    <Menu2
+        elevation={0}
+        getContentAnchorEl={null}
+        anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'center',
+        }}
+        transformOrigin={{
+            vertical: 'top',
+            horizontal: 'center',
+        }}
+        {...props}
+    />
+));
+
+const StyledMenuItem = withStyles((theme) => ({
+    root: {
+        '&:focus': {
+            backgroundColor: theme.palette.primary.main,
+            '& .MuiListItemIcon-root, & .MuiListItemText-primary': {
+                color: theme.palette.common.white,
+            },
+        },
+    },
+}))(MenuItem);
+
+
+
+
+
+export default function Menu() {
+    const classes = useStyles();
+
+    const [anchorEl, setAnchorEl] = React.useState(null);
+
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
 
     return (
-        <>
-            <section className="menu-top">
-                <div className="container">
-                    <div className="row">
-                        <div className="col">
-                            <div className="menu">
+        <div className={classes.menu}>
+            <AppBar className="container" position="static">
+                <Toolbar>
+                    <Link to="/">
 
-                                <div className="menu__item">
-                                    <Link to="/">
-                                        <HomeIcon className="fontSizeLarge" />
-                                        <Button>TRANG CHỦ</Button>
-                                    </Link>
+                        <Button >TRANG CHỦ</Button>
+                    </Link>
 
-                                </div>
-
-                                <div className="menu__item">
-                                    <div className="dropdown">
-                                        <Button className=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            ÔN THI TOIEC
-                                </Button>
-                                        <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <Link to="/part1" className="dropdown-item" >Part 1</Link>
-                                            <Link className="dropdown-item" >Part 2</Link>
-                                            <Link className="dropdown-item" >Part 3</Link>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="menu__item">
-                                    <Link to="/todofeature">
-                                        <Button>ĐỀ THI TOIEC FULL</Button>
-                                    </Link>
-
-                                </div>
+                    <div>
+                        <Button
+                            aria-controls="customized-menu"
+                            aria-haspopup="true"
+                            variant="contained"
+                            color="primary"
+                            onClick={handleClick}
 
 
+                        >
+                            Open Menu
+      </Button>
+                        <StyledMenu
+                            id="customized-menu"
+                            anchorEl={anchorEl}
+                            keepMounted
+                            open={Boolean(anchorEl)}
+                            onClose={handleClose}
+                        >
+
+                            <StyledMenuItem>
+
+                                <ListItemIcon className={classes.iconItem}>
+                                    <SendIcon fontSize="small" />
+                                </ListItemIcon>
+                                <Link to="/part1">
+                                    <ListItemText primary="Part 1" />
+                                </Link>
+                            </StyledMenuItem>
+
+                            <StyledMenuItem>
+                                <ListItemIcon className={classes.iconItem}>
+                                    <DraftsIcon fontSize="small" />
+                                </ListItemIcon>
+                                <ListItemText primary="Part 2" />
+                            </StyledMenuItem>
 
 
-                            </div>
+                            <StyledMenuItem>
+                                <ListItemIcon className={classes.iconItem}>
+                                    <InboxIcon fontSize="small" />
+                                </ListItemIcon>
+                                <ListItemText primary="Part 3" />
+                            </StyledMenuItem>
 
-
-                        </div>
-
-
+                        </StyledMenu>
                     </div>
 
-                </div>
-            </section>
-        </>
+
+                    <Link to="/todofeature">
+                        <Button>ĐỀ THI TOIEC FULL</Button>
+                    </Link>
+
+
+                </Toolbar>
+            </AppBar>
+        </div >
     );
 }
-
-export default Menu;

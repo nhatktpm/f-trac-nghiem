@@ -11,11 +11,11 @@ function Part1(props) {
 
     return (
         <div>
-            <div>Part1</div>
-            <Switch>
-            <Route path={match.url} exact component={ListTestPage}  />
-            <Route path={match.url/"/:testId"} exact component={DetailTestPage}  />
 
+            <Switch>
+
+                <Route path={match.url} exact component={ListTestPage} />
+                <Route path={`${match.url}/:idTest`} exact component={DetailTestPage} />
 
             </Switch>
 

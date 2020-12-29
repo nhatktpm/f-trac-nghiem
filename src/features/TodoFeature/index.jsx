@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import TodoList from '../../components/TodoList';
 import queryString from 'query-string';
 import TodoForm from '../../components/TodoForm';
+import { Container } from '@material-ui/core';
 
 
 
@@ -76,7 +77,7 @@ function TodoFeature(props) {
     }
 
     return (
-        <section>
+        <Container>
             <h3>What to do</h3>
             <TodoForm onSubmit={handleTodoFormSubmit} />
 
@@ -97,7 +98,7 @@ function TodoFeature(props) {
                 Show New
             </button>
 
-        </section>
+        </Container>
 
     );
 

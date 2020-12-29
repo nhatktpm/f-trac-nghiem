@@ -3,6 +3,7 @@ import './App.css';
 import Banner from './components/Banner';
 import Footer from './components/Footer';
 import Header from './components/Header';
+
 import Menu from './components/Menu';
 import HomeFeature from './features/Home';
 import Part1 from './features/Part1';

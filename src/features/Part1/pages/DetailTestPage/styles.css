@@ -1,0 +1,36 @@
+.bd {
+    border: 3px solid;
+    border-image: linear-gradient(#3e5152, #4c85bb) 1;
+}
+.tieu_de {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.bg_trang {
+    background-color: azure;
+}
+
+.f_btn {
+    justify-content: center;
+    display: flex;
+    margin-bottom: 40px;
+}
+.btn_nopbai {
+    background-color: #252a34;
+    border: 0;
+    border-radius: 25px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 900;
+    height: 50px;
+    overflow: hidden;
+    padding: 12px 17px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    width: 100px;
+    border: 2px solid #47cf73;
+}
+
+.btn_nopbai:hover {
+    background-color: #35513e;
+}

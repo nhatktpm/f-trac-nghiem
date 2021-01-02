@@ -87,7 +87,7 @@ export default function Menu() {
 
     return (
         <div className={classes.menu}>
-            <AppBar className="container" position="static">
+            <AppBar className="container" position="sticky">
                 <Toolbar>
                     <Link to="/">
 
@@ -105,7 +105,7 @@ export default function Menu() {
 
                         >
                             Open Menu
-      </Button>
+                        </Button>
                         <StyledMenu
                             id="customized-menu"
                             anchorEl={anchorEl}

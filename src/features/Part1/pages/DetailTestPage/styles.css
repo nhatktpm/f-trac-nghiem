@@ -4,10 +4,12 @@
 }
 .tieu_de {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    justify-content: center;
+    margin: 20px 0 20px 0px;
 }
 
 .bg_trang {
-    background-color: azure;
+    background-color: rgb(250, 249, 249);
 }
 
 .f_btn {
@@ -33,4 +35,36 @@
 
 .btn_nopbai:hover {
     background-color: #35513e;
+}
+
+
+.toiec_title{
+    box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2), 0px 3px 4px 0px rgba(0,0,0,0.14), 0px 1px 8px 0px rgba(0,0,0,0.12);
+    margin-bottom: 50px;
+}
+
+.m05{
+    margin: 0px 2px;
+    
+    background-color: #3f51b5;
+    padding: 10px;
+    color: white;
+
+}
+
+.fl_g0{
+    flex-grow:0;
+    margin: auto;
+}
+
+.fl_mr20{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 20px 0;
+}
+
+.con_audio{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
 }

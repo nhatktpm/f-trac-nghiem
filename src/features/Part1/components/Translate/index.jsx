@@ -3,10 +3,10 @@ import "../Translate/styles.css"
 
 function Translate(props) {
     return (
-        <div className="container">
+        <div className="container dich_nentrang">
             <div className="row">
                 <div className="col dich">
-                    
+                   <h5>Bài Nghe Tiếng Anh</h5> 
                         September 30, 2010
                         Ms. Josephine Boss
                         Chief Executive Officer
@@ -29,6 +29,7 @@ function Translate(props) {
                 </div>
 
                 <div className="col dich">
+                <h5>Bài Nghe Tiếng Việt</h5> 
                     Ngày 30 tháng 9 năm 2010
                     Bà Josephine Boss
                     Giám đốc điều hành

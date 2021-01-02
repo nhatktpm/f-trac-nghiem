@@ -1,19 +1,24 @@
-import React from 'react';
-import AdminMenu from './components/AdminMenu';
+import React, { useState } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import AdminDashBoard from './pages/AdminDashboar';
+
+import AdminLogin from './pages/AdminLogin';
+
 
 function Admin(props) {
+
+    const [todoList, setTodoList] = useState([
+
+    ]);
+
+
+
     return (
-        <div className="container">
-            <div className="row">
-                <div className="col-3">
-
-                    <AdminMenu />
-                </div>
-                <div className="col-9">
-                    main
-                </div>
-
-            </div>
+        <div>          
+                    {/* <Switch>                        
+                        <Route path="/dashboard" component={AdminDashBoard} />
+                    </Switch> */}
+                                    
         </div>
     );
 }

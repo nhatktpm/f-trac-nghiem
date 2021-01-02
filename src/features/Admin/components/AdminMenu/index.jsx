@@ -34,7 +34,7 @@ function AdminMenu() {
             >
               
               <p>
-                Manage Company
+                Manage Exercise
                 
               </p>
             </p>
@@ -42,34 +42,34 @@ function AdminMenu() {
               <ul className="nav d-block">
                 <NavLink
                   activeClassName="nav-link--active"
-                  to="/home/company/list-company"
+                  to="dashboard/list_exercise"
                   className="nav-link"
                 >
                   <span className="material-icons nav-icons">
                     
                   </span>
-                  List My Company
+                  List Exercise
                 </NavLink>
                 <NavLink
                   activeClassName="nav-link--active"
-                  to="/home/company/create-company"
+                  to="/dashboard/edit"
                   className="nav-link"
                 >
                   <span className="material-icons nav-icons">
                     
                   </span>
-                  Create Company
+                  Edit Exercise
                 </NavLink>
 
                 <NavLink
                   activeClassName="nav-link--active"
-                  to="/home/company/list-deleted-company"
+                  to="/dashboard/edit"
                   className="nav-link"
                 >
                   <span className="material-icons nav-icons">
                     
                   </span>
-                  List Delete Company
+                  Manage Question
                 </NavLink>
               </ul>
             </div>

@@ -1,0 +1,22 @@
+.clogin {
+    background-color: white;
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-control {
+    border: none;
+    border-radius: 0;
+}
+
+.btn-block {
+    background-color: rgb(85, 85, 252);
+    color: white
+}
+
+.btn-block {
+    background-color: rgb(63, 63, 253) !important;
+    color: white !important
+}

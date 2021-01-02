@@ -1,6 +1,7 @@
 .bd {
-    border: 3px solid;
-    border-image: linear-gradient(#3e5152, #4c85bb) 1;
+    border: 3px solid #544bb1;
+    
+    border-radius: 10px;
 }
 .tieu_de {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);

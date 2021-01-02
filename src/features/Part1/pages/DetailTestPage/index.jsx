@@ -1,36 +1,16 @@
 import React from 'react';
 import '../DetailTestPage/styles.css'
 import AudioPlay from 'react-audio-player';
-import Radio from '@material-ui/core/Radio';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormControl from '@material-ui/core/FormControl';
-import FormLabel from '@material-ui/core/FormLabel';
+
 import Translate from '../../components/Translate';
 import Question from '../../components/Question';
 
 
 function DetailTestPage(props) {
-    const [danhdau, setDanhdau] = React.useState('e');
-    const [cau2, setCau2] = React.useState('e');
-
-
-    const handleChange = (event) => {
-
-        console.log(event.target)
-
-
-        setDanhdau(event.target.value);
-        setCau2(event.target.value);
 
 
 
-    };
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log(danhdau, cau2)
-    };
 
 
     return (
@@ -83,56 +63,11 @@ function DetailTestPage(props) {
 
                 </section>
 
-                {/* <section className="bd">
-                    <div className="row">
-                        <div className="col">Cau hoi</div>
-                    </div>
-
-                    <div className="row">
-                        <div className="col fl_g0">
-                            <img alt="" height="250px" width="380px" src="https://noidung.tienganh123.com/file/luyen-thi-toeic/part1%20practice/in%20the%20office%202/1.jpg" />
-                        </div>
-                    </div>
-
-                    <div className="row">
-                        <div className="col">
-                            <form onSubmit={handleSubmit}>
-                                <FormControl component="fieldset" name="cau1" >
-                                    <FormLabel component="legend">Gender</FormLabel>
-                                    <RadioGroup aria-label="gender" name="danhdau" value={danhdau} onChange={handleChange}>
-                                        <FormControlLabel value="a" control={<Radio />} label="A" />
-                                        <FormControlLabel value="b" control={<Radio />} label="B" />
-                                        <FormControlLabel value="c" control={<Radio />} label="C" />
-                                        <FormControlLabel value="d" control={<Radio />} label="D" />
-                                    </RadioGroup>
-                                </FormControl>
-
-
-
-
-
-                                <div className="row ">
-                                    <div className="col f_btn">
-                                        <div onClick={handleSubmit} className="btn_nopbai">
-                                            Nộp Bài
-                                         </div>
-                                    </div>
-                                </div>
-
-
-                            </form>
-                           
-
-                        </div>
-
-
-                    </div>
-
-
-                </section> */}
-
-                <Question />
+                <Question nameque="cau1" namep="asd"  />
                 
+               
+
+
                 <section>
                     <div className="row">
                         <div className="col">Phan trang</div>

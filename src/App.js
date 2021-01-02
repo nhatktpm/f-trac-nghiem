@@ -7,6 +7,9 @@ import Header from './components/Header';
 
 import Menu from './components/Menu';
 import Admin from './features/Admin';
+
+import AdminDashBoard from './features/Admin/pages/AdminDashboar';
+import AdminLogin from './features/Admin/pages/AdminLogin';
 import HomeFeature from './features/Home';
 import Part1 from './features/Part1';
 
@@ -28,7 +31,8 @@ function App() {
             <Route path="/" component={HomeFeature} exact />
             <Route path="/todofeature/" component={TodoFeature} />
             <Route path="/part1" component={Part1} />
-            <Route path="/admin" component={Admin} />
+            <Route path="/admin" component={AdminLogin} />
+            <Route path="/dashboard" component={AdminDashBoard} />
 
           </Switch>
         </section>

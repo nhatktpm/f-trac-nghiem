@@ -9,7 +9,7 @@ import Pagination from "react-js-pagination";
 
 function DetailTestPage(props) {
 
-    const [showAnswer, setShowAnswer] = useState(true)
+    const [showAnswer, setShowAnswer] = useState(false)
 
 
     var elementTranslate = showAnswer ? <Translate /> : '';
@@ -71,7 +71,7 @@ function DetailTestPage(props) {
                         <div className="row">
                             <div className="col con_audio">
                                 <AudioPlay
-                                    src="http://toeicspeakingmsngoc.com/images/audio/audio-1546316975_mozilgeecolc1000ver4at10part-1cutted.mp3"
+                                    src="https://toeic24.vn/upload/audio/part_i_intro.mp3"
 
                                     controls
                                 />

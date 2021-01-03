@@ -48,7 +48,45 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const cards = [1, 2, 3, 4, 5, 6];
+const cards = [
+    {
+        id: 0,
+        name: "In the office 2",
+        mota: "Học viên luyện tập Part 1 Photographs với chủ đề In the office 2",
+        img:"https://noidung.tienganh123.com/file/luyen-thi-toeic//part1%20practice/images.jpg",
+    },
+    {
+        id: 1,
+        name: "In The Room",
+        mota: "Học viên luyện tập Part 1 - Photographs với chủ đề At a restauran",
+        img:"https://noidung.tienganh123.com/file/luyen-thi-toeic//part1%20practice/at%20a-%20restaurant.jpg",
+        
+    },
+    {
+        id: 2,
+        name: "At The Bus Top",
+        mota: "Học viên luyện tập Part 1 - Photographs với chủ đề At the bus stop",
+        img:"https://noidung.tienganh123.com/file/luyen-thi-toeic//part1%20practice/at-the%20bus%20stop.JPG",
+    },        
+    {
+        id: 3,
+        name: "Outdoor Activies",
+        mota: "Học viên luyện nghe part 1 - Photographs với chủ đề Outdoor activities",
+        img:"https://noidung.tienganh123.com/file/luyen-thi-toeic//part1%20practice/outdoor%202.jpg",
+    },
+    {
+        id: 3,
+        name: "Communications",
+        mota: "Học viên luyện nghe part 1 - Photographs với chủ đề Communications",
+        img:"https://noidung.tienganh123.com/file/luyen-thi-toeic//part1%20practice/communication%202.jpg",
+    },
+    {
+        id: 3,
+        name: "On The Street",
+        mota: "Học viên luyện nghe part 1 - Photographs với chủ đề On the street ",
+        img:"https://noidung.tienganh123.com/file/luyen-thi-toeic//part1%20practice/On%20the%20street%202.jpg",
+    }
+];
 
 
 function ListTestPage(props) {
@@ -57,32 +95,25 @@ function ListTestPage(props) {
         <div className="container">
             <React.Fragment>
                 <CssBaseline />
-                <AppBar position="relative">
-                    <Toolbar>
-                        <CameraIcon className={classes.icon} />
-                        <Typography variant="h6" color="inherit" noWrap>
-                            Album layout
-            </Typography>
-                    </Toolbar>
-                </AppBar>
+                {/*  */}
                 <main>
                     {/* Hero unit */}
                     <div className={classes.heroContent}>
                         <Container maxWidth="sm">
                             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-                                Album layout
+                               Toiec - Part 1 
               </Typography>
 
                             <div className={classes.heroButtons}>
                                 <Grid container spacing={2} justify="center">
                                     <Grid item>
                                         <Button variant="contained" color="primary">
-                                            Main call to action
+                                            
                     </Button>
                                     </Grid>
                                     <Grid item>
                                         <Button variant="outlined" color="primary">
-                                            Secondary action
+                                            
                     </Button>
                                     </Grid>
                                 </Grid>
@@ -97,16 +128,16 @@ function ListTestPage(props) {
                                     <Card className={classes.card}>
                                         <CardMedia
                                             className={classes.cardMedia}
-                                            image="https://source.unsplash.com/random"
+                                            image={card.img}
                                             title="Image title"
                                         />
                                         <CardContent className={classes.cardContent}>
                                             <Typography gutterBottom variant="h5" component="h2">
-                                                Heading
+                                               {card.name}
                                             </Typography>
 
                                             <Typography>
-                                                This is a media card. You can use this section to describe the content.
+                                               {card.mota}
                                              </Typography>
 
                                         </CardContent>
@@ -114,13 +145,13 @@ function ListTestPage(props) {
                                         <CardActions>
                                             <Link to="part1/1" >
                                                 <Button size="small" color="primary">
-                                                    View
+                                                    Làm Bài Ngay
                                             </Button>
                                             </Link>
 
 
                                             <Button size="small" color="primary">
-                                                Edit
+                                                Diểm
                                         </Button>
                                         </CardActions>
                                     </Card>

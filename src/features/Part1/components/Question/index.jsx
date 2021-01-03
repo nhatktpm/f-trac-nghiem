@@ -107,7 +107,7 @@ function Question(props) {
 
                 <div className="row">
                     <div className="col fl_g0">
-                        <img alt="" height="250px" width="380px" src="https://noidung.tienganh123.com/file/luyen-thi-toeic/part1%20practice/in%20the%20office%202/2.jpg" />
+                        <img alt="" height="250px" width="380px" src="https://noidung.tienganh123.com/file/luyen-thi-toeic/part1%20practice/in%20the%20office%202/1.jpg" />
                     </div>
                 </div>
                 <div className="row">
@@ -136,7 +136,7 @@ function Question(props) {
                 <div className="row">
                     <div className="col">
                         <Button variant="contained" color="secondary">
-                            Câu 1
+                            Câu 2
                     </Button>
                     </div>
                 </div>
@@ -178,7 +178,7 @@ function Question(props) {
 
                 <div className="row">
                     <div className="col fl_g0">
-                        <img alt="" height="250px" width="380px" src="https://noidung.tienganh123.com/file/luyen-thi-toeic/part1%20practice/in%20the%20office%202/2.jpg" />
+                        <img alt="" height="250px" width="380px" src="https://noidung.tienganh123.com/file/luyen-thi-toeic/part1%20practice/in%20the%20office%202/3.jpg" />
                     </div>
                 </div>
                 <div className="row">
@@ -213,7 +213,7 @@ function Question(props) {
 
                 <div className="row">
                     <div className="col fl_g0">
-                        <img alt="" height="250px" width="380px" src="https://noidung.tienganh123.com/file/luyen-thi-toeic/part1%20practice/in%20the%20office%202/2.jpg" />
+                        <img alt="" height="250px" width="380px" src="https://noidung.tienganh123.com/file/luyen-thi-toeic/part1%20practice/in%20the%20office%202/4.jpg" />
                     </div>
                 </div>
                 <div className="row">
@@ -247,7 +247,7 @@ function Question(props) {
 
                 <div className="row">
                     <div className="col fl_g0">
-                        <img alt="" height="250px" width="380px" src="https://noidung.tienganh123.com/file/luyen-thi-toeic/part1%20practice/in%20the%20office%202/2.jpg" />
+                        <img alt="" height="250px" width="380px" src="https://noidung.tienganh123.com/file/luyen-thi-toeic/part1%20practice/in%20the%20office%202/5.jpg" />
                     </div>
                 </div>
                 <div className="row">

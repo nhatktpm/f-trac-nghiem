@@ -22,6 +22,7 @@ import SendIcon from '@material-ui/icons/Send';
 
 
 
+
 const useStyles = makeStyles((theme) => ({
     menu: {
         margin: 30,
@@ -33,6 +34,9 @@ const useStyles = makeStyles((theme) => ({
         minWidth: 35,
     },
     
+
+    
+
 
 
 }));
@@ -92,7 +96,9 @@ export default function Menu() {
                 <Toolbar>
                     <Link to="/">
 
-                        <Button >TRANG CHỦ</Button>
+                        <Button
+                       
+                         className="btn_menu"  >TRANG CHỦ</Button>
                     </Link>
 
                     <div>
@@ -145,12 +151,12 @@ export default function Menu() {
 
 
                     <Link to="/todofeature">
-                        <Button>ĐỀ THI TOIEC FULL</Button>
+                        <Button className="btn_menu">ĐỀ THI TOIEC FULL</Button>
                     </Link>
 
 
                 </Toolbar>
             </AppBar>
-        </div >
+        </div>
     );
 }

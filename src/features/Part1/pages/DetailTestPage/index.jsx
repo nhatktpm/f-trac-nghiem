@@ -1,16 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../DetailTestPage/styles.css'
 import AudioPlay from 'react-audio-player';
+import swal from "sweetalert";
 
 import Translate from '../../components/Translate';
 import Question from '../../components/Question';
-
+import Pagination from "react-js-pagination";
 
 function DetailTestPage(props) {
 
+    const [showAnswer, setShowAnswer] = useState(true)
 
 
+    var elementTranslate = showAnswer ? <Translate /> : '';
 
+    const toggoTranslate = () => {
+        swal({
+            title: "Bạn Có Chắc Nộp Bài ?",
+            text: "Bài thi sẻ được chấm điểm và không được chỉnh sửa",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((willDelete) => {
+                if (willDelete) {
+
+                    setShowAnswer(!showAnswer)
+                }
+            });
+
+
+    }
 
 
     return (
@@ -63,14 +83,20 @@ function DetailTestPage(props) {
 
                 </section>
 
-                <Question nameque="cau1" namep="asd"  />
-                
-               
+                <Question />
+
+
 
 
                 <section>
                     <div className="row">
-                        <div className="col">Phan trang</div>
+                        <Pagination
+                            activePage={1}
+                            itemsCountPerPage={4}
+                            totalItemsCount={5}
+                            pageRangeDisplayed={6}
+
+                        />
                     </div>
 
                     <div className="row">
@@ -81,13 +107,13 @@ function DetailTestPage(props) {
 
                     <div className="row ">
                         <div className="col f_btn">
-                            <div className="btn_nopbai">
+                            <div onClick={toggoTranslate} className="btn_nopbai">
                                 Nộp Bài
                             </div>
                         </div>
                     </div>
 
-                    <Translate />
+                    {elementTranslate}
                 </section>
             </div>
         </div>

@@ -11,7 +11,7 @@ function AdminMenu() {
       </div>
       <div className="sidebar-wrapper">
         <ul className="nav">
-          <li className="nav-item">
+          <li className="nav-item ">
             <NavLink
               activeClassName="nav-link--active"
               to="/"
@@ -63,7 +63,7 @@ function AdminMenu() {
 
                 <NavLink
                   activeClassName="nav-link--active"
-                  to="/dashboard/edit"
+                  to="/dashboard/question"
                   className="nav-link"
                 >
                   <span className="material-icons nav-icons">
@@ -86,7 +86,7 @@ function AdminMenu() {
             >
             
               <p>
-                Manage Product
+                FULL TOIEC
                
               </p>
             </p>

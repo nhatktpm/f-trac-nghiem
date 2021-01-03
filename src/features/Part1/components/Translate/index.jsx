@@ -5,8 +5,17 @@ function Translate(props) {
     return (
         <div className="container dich_nentrang">
             <div className="row">
+
+                <div className="col">
+                    Đáp Án: Câu 1.A - Câu 2.B - Câu 3.C - Câu 4.D - Câu 5.A
+            </div>
+                <div className="col">
+                    Điểm: 4/5
+            </div>
+            </div>
+            <div className="row">
                 <div className="col dich">
-                   <h5>Bài Nghe Tiếng Anh</h5> 
+                    <h5>Bài Nghe Tiếng Anh</h5>
                         September 30, 2010
                         Ms. Josephine Boss
                         Chief Executive Officer
@@ -15,7 +24,7 @@ function Translate(props) {
                         Philadelphia, PA 12345
                         Dear Mr. Boss,
                         I am writing to formally notify you that
-                         I am resigning from my position as 
+                         I am resigning from my position as
                          Administrative Assistant with Acme Company.
                         My last day of employment will
                          be October 14, as per the terms of my employment contract.
@@ -24,12 +33,12 @@ function Translate(props) {
                          . I wish you and the company success in the future.
                         Sincerely,
                         Jill Applicant
-                
+
 
                 </div>
 
                 <div className="col dich">
-                <h5>Bài Nghe Tiếng Việt</h5> 
+                    <h5>Bài Nghe Tiếng Việt</h5>
                     Ngày 30 tháng 9 năm 2010
                     Bà Josephine Boss
                     Giám đốc điều hành

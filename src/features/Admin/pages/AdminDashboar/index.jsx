@@ -7,10 +7,10 @@ import QuestionExercise from '../../components/QuestionExercise';
 
 function AdminDashBoard(props) {
     return (
-        <div>
+        <div className="d-flex" >
             <AdminMenu />
-            <div className="container">
-                <div classNames="row">
+            <div className="main-panel">
+                <div classNames="content">
                     <div className="col-3">
 
                         <Switch>
